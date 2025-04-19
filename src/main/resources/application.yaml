@@ -1,0 +1,10 @@
+server:
+  port: 8080
+logging:
+  file:
+    name: another-image.log
+  logback:
+    rollingpolicy:
+      file-name-pattern: another-image-%d{yyyy-MM-dd}.%i.log
+      max-file-size: 100KB
+      max-history: 5
