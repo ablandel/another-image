@@ -12,6 +12,18 @@ Small summaries are available after the `build.sh` script execution to compare t
 (each build time is inaccurate due to Docker images and layers cache shared between the three image build generations -
 this project does not aim to be a benchmark (¬‿¬)).
 
+For those who do not want to run the build on their machines and see the result by themselves, here are some results I
+obtained on one of my (very) old but faithful machines:
+
+| Image type | Build time | Image size | Initialization time |
+|------------|------------|------------|---------------------|
+| uber       | 123.47s    | 385MB      | ~3.51s              |
+| plain      | 116.02s    | 101MB      | ~3.07s              |
+| native     | 305.93s    | 121MB      | ~0.12s              |
+
+Build times have been calculated on an arbitrary average of 5 builds (with the base image on the machine).
+Initialization times have been calculated on an arbitrary average of 20 launches.
+
 ## Build all the images one after the other
 
 Do not hesitate to do something else during the build, it may take a while depending on your machine.
